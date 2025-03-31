@@ -10,7 +10,17 @@ service Auth {
       rpc Register (RegisterRequest) returns (RegisterResponse);
       rpc Login (LoginRequest) returns (LoginResponse);
       rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+      rpc Verify (VerifyRequest) returns (VerifyResponse);
 
+}
+
+message VerifyRequest {
+      string JWT_token = 1;
+      string refresh_token = 2;
+}
+
+message VerifyResponse {
+      bool ok = 1;
 }
 
 message RegisterRequest {
