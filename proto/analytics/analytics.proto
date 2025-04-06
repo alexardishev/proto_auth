@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+
+package analyticsgrpc;
+
+
+option go_package = "ardyshev.analytics.v1;analyticsv1";
+
+service Analytics {
+    rpc StartETLProcess (StartETLProcessRequest) returns (StartETLProcessResponse);
+}
+
+message StartETLProcessRequest {
+   int64 shemaID = 1;
+
+}
+
+message StartETLProcessResponse {
+    int64 taskID = 1;
+}
