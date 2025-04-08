@@ -16,5 +16,5 @@ message StartETLProcessRequest {
 }
 
 message StartETLProcessResponse {
-    int64 taskID = 1;
+    string taskID = 1;
 }
